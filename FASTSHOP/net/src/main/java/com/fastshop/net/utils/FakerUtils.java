@@ -25,7 +25,7 @@ public class FakerUtils {
     String[] detailemail = {"@yahoo.com", "@gmail.com", "@fpt.edu.vn", "@io.com", "@outlook.com", "@zoho.com", "@edu.com.vn"};
     final String user = "sa";
     final String password = "0907718993";
-    final String url = "jdbc:sqlserver://localhost:1433;databaseName=fastshop";
+    final String url = "jdbc:sqlserver://db:1433;databaseName=fastshop";
     
     // -----------------------------------------------------------------------------
     static int number = 500;
