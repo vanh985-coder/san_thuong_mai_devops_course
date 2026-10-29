@@ -55,6 +55,8 @@ jobs:
           script: |
             set -e
             cd /root/TranDucVietAnh-compose-app/san_thuong_mai_devops_course/FASTSHOP/net
+            # cập nhật docker-compose.yml và các file cấu hình trên server theo main
+            git pull --ff-only origin main
             sed -i '/^IMAGE_NAME=/d;/^IMAGE_TAG=/d' .env
             echo "IMAGE_NAME=$IMAGE_NAME" >> .env
             echo "IMAGE_TAG=$IMAGE_TAG" >> .env
