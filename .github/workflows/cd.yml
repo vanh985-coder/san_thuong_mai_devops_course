@@ -55,8 +55,6 @@ jobs:
           script: |
             set -e
             cd /root/TranDucVietAnh-compose-app/san_thuong_mai_devops_course/FASTSHOP/net
-            # lưu tag vào .env (giữ nguyên các biến khác như mật khẩu DB)
-            touch .env
             sed -i '/^IMAGE_NAME=/d;/^IMAGE_TAG=/d' .env
             echo "IMAGE_NAME=$IMAGE_NAME" >> .env
             echo "IMAGE_TAG=$IMAGE_TAG" >> .env
@@ -66,4 +64,4 @@ jobs:
             echo "--- docker compose ps ---"
             docker compose ps
             echo "--- health check ---"
-            curl -fsS --retry 10 --retry-delay 5 --retry-all-errors http://localhost:<cổng>/
+            curl -fsS --retry 20 --retry-delay 5 --retry-all-errors http://localhost:18096/
